@@ -3,8 +3,6 @@ package com.example.artstore.book.basebook;
 import com.example.artstore.book.bookcategory.CategoryType;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Column;
 import javax.persistence.EnumType;
@@ -18,8 +16,7 @@ import java.time.LocalDate;
 
 @MappedSuperclass
 @Data
-//@SuperBuilder
-public class BaseBook {
+public class BaseBook implements Book {
 
     @Id
     @Column(name = "ID")

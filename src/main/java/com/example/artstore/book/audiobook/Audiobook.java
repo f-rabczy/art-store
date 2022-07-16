@@ -1,12 +1,10 @@
 package com.example.artstore.book.audiobook;
 
 import com.example.artstore.book.basebook.BaseBook;
+import com.example.artstore.book.basebook.Book;
 import com.example.artstore.book.basebook.Observable;
 import com.example.artstore.user.domain.User;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -21,7 +19,7 @@ import java.util.Set;
 @Entity
 @Table(name = "AUDIOBOOKS")
 @Data
-public class Audiobook extends BaseBook implements Observable {
+public class Audiobook extends BaseBook implements Observable, Book {
 
     @Column(name = "NARRATOR")
     private String narrator;

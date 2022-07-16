@@ -1,11 +1,11 @@
 package com.example.artstore.book.ebook;
 
 import com.example.artstore.book.basebook.BaseBook;
+import com.example.artstore.book.basebook.Book;
 import com.example.artstore.book.basebook.Observable;
 import com.example.artstore.user.domain.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -22,7 +22,7 @@ import java.util.Set;
 @Data
 //@SuperBuilder
 @NoArgsConstructor
-public class EBook extends BaseBook implements Observable {
+public class EBook extends BaseBook implements Observable, Book {
 
     @Column(name = "PAGES")
     private Integer pages;
